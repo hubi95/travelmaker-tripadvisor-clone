@@ -155,7 +155,7 @@ main {
 
 section.search-banner {
     height: 350px;
-    background-image: url('/travelmaker-tripadvisor-clone/img/search-banner.jpg');
+    background-image: url('/img/search-banner.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center 69%;
@@ -266,7 +266,7 @@ section.search-banner {
 }
 
 .pic-1, .pic-2, .pic-3, .pic-4, .pic-5, .pic-6, .pic-7, .pic-8 {
-    background-image: url('/travelmaker-tripadvisor-clone/img/vip-carousel/cody-board-Q3FvrfeDEwI-unsplash.jpg');
+    background-image: url('/img/vip-carousel/cody-board-Q3FvrfeDEwI-unsplash.jpg');
 }
 
 /* footer ------------------------------- */
