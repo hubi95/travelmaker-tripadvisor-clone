@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 150vh;
     background-color: white;
 }
 
@@ -43,6 +42,7 @@ button {
 
 header {
     position: fixed;
+    z-index: 10;
     top: 0%;
     left: 50%;
     display: flex;
@@ -244,13 +244,12 @@ section.search-banner {
 .carousel-vip {
     position: relative;
     height: 273px;
-    transition: 0.9s;
     background-attachment: scroll;
     background-position: center;
     background-size: cover;
 }
 
-.carousel-vip:hover::after {
+.carousel-vip:hover::after, .carousel-rentals:hover::after {
     position: absolute;
     z-index: 10;
     top: 0;
@@ -326,9 +325,10 @@ button.vip-like i {
 .carousel-cell h4 {
     /* font-size: 50px; */
     font-weight: 600;
+    margin-top: 5px;
 }
 
-.vip-price {
+.second-text {
     font-size: 15px;
     font-weight: 600;
 }
@@ -364,6 +364,57 @@ button.vip-like i {
 .pic-8 {
     background-image: url('../img/vip-carousel/paul-szewczyk-yHmnjcVHoP4-unsplash.jpg');
 }
+
+/* reantls section------------------------*/
+
+.home-rentals {
+    margin-top: 60px;
+}
+
+.home-rentals h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 33px;
+    grid-column: 1/13;
+}
+
+.home-rentals p {
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 20px;
+    grid-column: 1/4;
+}
+
+.rental-carousel {
+    margin-top: ;
+    grid-column: 4/13;
+}
+
+.carousel-rentals {
+    height: 204px;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-cell-rentals {
+    width: 272px;
+    height: 300px;
+    margin-right: 15px;
+}
+
+.carousel-cell-rentals h4 {
+    /* font-size: 50px; */
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.rentals {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* explore section ----------------------- */
 
 /* footer ------------------------------- */
 
