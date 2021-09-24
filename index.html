@@ -6,22 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travelmaker</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
+
+    <header>
+        <div class="wrapper header-wrapper">
             <img src="./img/travelmaker_logo.png" alt="">
-            <div>
+            <div class="header-buttons">
                 <button class="pencil">
                     <i class="fas fa-pencil-alt"></i><span>Review</span>
                 </button>
@@ -33,9 +38,12 @@
                 </button>
                 <button class="sign-in"><span>Sign in</span></button>
             </div>
-        </header>
-        <div id="content">
-            <nav class="grid">
+        </div>
+    </header>
+
+    <nav>
+        <div class="wrapper">
+            <div class="nav-wrapper grid">
                 <button class="nav-tile"><span>Hotels</span> <i class="fas fa-bed"></i></button>
                 <button class="nav-tile"><span>Vacation Rentals</span> <i class="fas fa-key"></i></button>
                 <button class="nav-tile"><span>Things to Do</span> <i class="fas fa-clipboard-list"></i></button>
@@ -45,239 +53,259 @@
                         class="fas fa-plane"></i></button>
                 <button class="nav-tile extra-button"><span>Cruises</spancla> <i class="fas fa-ship"></i></button>
                 <button class="nav-tile"><span>More</span> <i class="fas fa-ellipsis-h"></i></button>
-            </nav>
-            <main>
-                <section class="search-banner grid">
-                    <div class="search-main">
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="search-banner">
+            <div class="wrapper">
+                <div class="search-wrapper">
+                    <div class="search-bubble">
                         <button><i class="fas fa-search"></i></button>
                         <input type="text" placeholder="Where to?">
                     </div>
-                </section>
-                <section class="vip-member">
-                    <h2>VIP Cool stays</h2>
-                    <p>Where Travelmaker VIP members are staying and saving</p>
-                    <div class="main-carousel">
-                        <div class="carousel-cell">
-                            <div class="carousel-vip pic-1">
-                                <div class="vip-logo"></div>
-                                <button class="vip-like">
-                                    <i class="far fa-heart"></i>
-                                </button>
-                            </div>
-                            <h4>South Beach Hotel</h4>
-                            <div class="review-dots">
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot">
-                                    <div class="half"></div>
-                                </div>
-                                <span>4,192</span>
-                            </div>
-                            <span class="second-text">from $240/night</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="vip-member">
+            <div class="wrapper">
+                <h2>VIP Cool stays</h2>
+                <p>Where Travelmaker VIP members are staying and saving</p>
+                <div class="main-carousel">
+                    <div class="carousel-cell">
+                        <div class="carousel-pic-default pic-1">
+                            <div class="vip-logo"></div>
+                            <button class="vip-like">
+                                <i class="far fa-heart"></i>
+                            </button>
                         </div>
-                        <div class="carousel-cell">
-                            <div class="carousel-vip pic-2">
-                                <div class="vip-logo"></div>
-                                <button class="vip-like">
-                                    <i class="far fa-heart"></i>
-                                </button>
+                        <h4>South Beach Hotel</h4>
+                        <div class="review-dots">
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot">
+                                <div class="half"></div>
                             </div>
-                            <h4>Miami Soho Beach House</h4>
-                            <div class="review-dots">
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <span>3,457</span>
-                            </div> <span class="second-text">from $430/night</span>
+                            <span>4,192</span>
                         </div>
-                        <div class="carousel-cell">
-                            <div class="carousel-vip pic-3">
-                                <div class="vip-logo"></div>
-                                <button class="vip-like">
-                                    <i class="far fa-heart"></i>
-                                </button>
-                            </div>
-                            <h4>Tropical Hotel</h4>
-                            <div class="review-dots">
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot">
-                                    <div class="half"></div>
-                                </div>
-                                <span>4,609</span>
-                            </div> <span class="second-text">from $520/night</span>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="carousel-vip pic-4">
-                                <div class="vip-logo"></div>
-                                <button class="vip-like">
-                                    <i class="far fa-heart"></i>
-                                </button>
-                            </div>
-                            <h4>Indonesia Mystic Palace</h4>
-                            <div class="review-dots">
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot empty"></div>
-                                <span>2,490</span>
-                            </div> <span class="second-text">from $150/night</span>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="carousel-vip pic-5">
-                                <div class="vip-logo"></div>
-                                <button class="vip-like">
-                                    <i class="far fa-heart"></i>
-                                </button>
-                            </div>
-                            <h4>Dubai Oriental Hotel</h4>
-                            <div class="review-dots">
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <span>3,523</span>
-                            </div> <span class="second-text">from $400/night</span>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="carousel-vip pic-6">
-                                <div class="vip-logo"></div>
-                                <button class="vip-like">
-                                    <i class="far fa-heart"></i>
-                                </button>
-                            </div>
-                            <h4>California Dreamin</h4>
-                            <div class="review-dots">
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot empty"></div>
-                                <span>4,685</span>
-                            </div> <span class="second-text">from $180/night</span>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="carousel-vip pic-7">
-                                <div class="vip-logo"></div>
-                                <button class="vip-like">
-                                    <i class="far fa-heart"></i>
-                                </button>
-                            </div>
-                            <h4>Thailand hotel</h4>
-                            <div class="review-dots">
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <span>3,422</span>
-                            </div> <span class="second-text">from $550/night</span>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="carousel-vip pic-8">
-                                <div class="vip-logo"></div>
-                                <button class="vip-like">
-                                    <i class="far fa-heart"></i>
-                                </button>
-                            </div>
-                            <h4>Cambodia Tropical Resort</h4>
-                            <div class="review-dots">
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot"></div>
-                                <div class="rev-dot">
-                                    <div class="half"></div>
-                                </div>
-                                <span>3,543</span>
-                            </div> <span class="second-text">from $350/night</span>
-                        </div>
+                        <span class="second-text">from $240/night</span>
                     </div>
-                </section>
-                <section class="home-rentals grid">
+                    <div class="carousel-cell">
+                        <div class="carousel-pic-default pic-2">
+                            <div class="vip-logo"></div>
+                            <button class="vip-like">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <h4>Miami Soho Beach House</h4>
+                        <div class="review-dots">
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <span>3,457</span>
+                        </div> <span class="second-text">from $430/night</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="carousel-pic-default pic-3">
+                            <div class="vip-logo"></div>
+                            <button class="vip-like">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <h4>Tropical Hotel</h4>
+                        <div class="review-dots">
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot">
+                                <div class="half"></div>
+                            </div>
+                            <span>4,609</span>
+                        </div> <span class="second-text">from $520/night</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="carousel-pic-default pic-4">
+                            <div class="vip-logo"></div>
+                            <button class="vip-like">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <h4>Indonesia Mystic Palace</h4>
+                        <div class="review-dots">
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot empty"></div>
+                            <span>2,490</span>
+                        </div> <span class="second-text">from $150/night</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="carousel-pic-default pic-5">
+                            <div class="vip-logo"></div>
+                            <button class="vip-like">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <h4>Dubai Oriental Hotel</h4>
+                        <div class="review-dots">
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <span>3,523</span>
+                        </div> <span class="second-text">from $400/night</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="carousel-pic-default pic-6">
+                            <div class="vip-logo"></div>
+                            <button class="vip-like">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <h4>California Dreamin</h4>
+                        <div class="review-dots">
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot empty"></div>
+                            <span>4,685</span>
+                        </div> <span class="second-text">from $180/night</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="carousel-pic-default pic-7">
+                            <div class="vip-logo"></div>
+                            <button class="vip-like">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <h4>Thailand hotel</h4>
+                        <div class="review-dots">
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <span>3,422</span>
+                        </div> <span class="second-text">from $550/night</span>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="carousel-pic-default pic-8">
+                            <div class="vip-logo"></div>
+                            <button class="vip-like">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <h4>Cambodia Tropical Resort</h4>
+                        <div class="review-dots">
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot"></div>
+                            <div class="rev-dot">
+                                <div class="half"></div>
+                            </div>
+                            <span>3,543</span>
+                        </div> <span class="second-text">from $350/night</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-rentals">
+            <div class="wrapper">
+                <div class="rentals-wrapper grid">
                     <h2>Home Rentals Near You</h2>
                     <p>We think you'd enjoy these homes for a quick trip out of town.</p>
-                    <div class="rental-carousel">
+                    <div class="rentals-carousel">
                         <div class="carousel-cell-rentals">
-                            <div class="carousel-rentals pic-1"></div>
+                            <div class="carousel-pic-rentals pic-1"></div>
                             <h4>Rentals in Warsaw</h4>
-                            <span class="rentals">500 rentals</span>
+                            <span class="rentals-amount">500 rentals</span>
                         </div>
                         <div class="carousel-cell-rentals">
-                            <div class="carousel-rentals pic-1"></div>
+                            <div class="carousel-pic-rentals pic-1"></div>
                             <h4>Rentals in Warsaw</h4>
-                            <span class="rentals">500 rentals</span>
+                            <span class="rentals-amount">500 rentals</span>
                         </div>
                         <div class="carousel-cell-rentals">
-                            <div class="carousel-rentals pic-1"></div>
+                            <div class="carousel-pic-rentals pic-1"></div>
                             <h4>Rentals in Warsaw</h4>
-                            <span class="rentals">500 rentals</span>
+                            <span class="rentals-amount">500 rentals</span>
                         </div>
                         <div class="carousel-cell-rentals">
-                            <div class="carousel-rentals pic-1"></div>
+                            <div class="carousel-pic-rentals pic-1"></div>
                             <h4>Rentals in Warsaw</h4>
-                            <span class="rentals">500 rentals</span>
+                            <span class="rentals-amount">500 rentals</span>
                         </div>
                         <div class="carousel-cell-rentals">
-                            <div class="carousel-rentals pic-1"></div>
+                            <div class="carousel-pic-rentals pic-1"></div>
                             <h4>Rentals in Warsaw</h4>
-                            <span class="rentals">500 rentals</span>
+                            <span class="rentals-amount">500 rentals</span>
                         </div>
                         <div class="carousel-cell-rentals">
-                            <div class="carousel-rentals pic-1"></div>
+                            <div class="carousel-pic-rentals pic-1"></div>
                             <h4>Rentals in Warsaw</h4>
-                            <span class="rentals">500 rentals</span>
+                            <span class="rentals-amount">500 rentals</span>
                         </div>
                     </div>
-                </section>
-                <section class="more-to-explore">
-                    <h2>Home Rentals Near You</h2>
-                    <p>We think you'd enjoy these homes for a quick trip out of town.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="more-to-explore">
+            <div class="wrapper">
+                <div class="explore-wrapper">
+                    <h2>More to explore</h2>
                     <div class="explore-carousel">
                         <div class="carousel-cell-explore">
-                            <div class="carousel-rentals pic-1">
+                            <div class="carousel-pic-explore pic-1">
                                 <button class="vip-like">
                                     <i class="far fa-heart"></i>
                                 </button>
                             </div>
-                            <span class="rentals">500 rentals</span>
-                            <h4>Rentals in Warsaw</h4>
+                            <span>From Travelmaker</span>
+                            <h4>Why Fall Is the Perfect Time to Visit Our National Parks</h4>
                         </div>
                         <div class="carousel-cell-explore">
-                            <div class="carousel-rentals pic-1">
+                            <div class="carousel-pic-explore pic-1">
                                 <button class="vip-like">
                                     <i class="far fa-heart"></i>
                                 </button>
                             </div>
-                            <span class="rentals">500 rentals</span>
-                            <h4>Rentals in Warsaw</h4>
+                            <span>From Travelmaker</span>
+                            <h4>A Guide to Last-Minute Road Trips You Can Do Right Now</h4>
                         </div>
                         <div class="carousel-cell-explore">
-                            <div class="carousel-rentals pic-1">
+                            <div class="carousel-pic-explore pic-1">
                                 <button class="vip-like">
                                     <i class="far fa-heart"></i>
                                 </button>
                             </div>
-                            <span class="rentals">500 rentals</span>
-                            <h4>Rentals in Warsaw</h4>
+                            <span>From Travelmaker</span>
+                            <h4>All the Ways We're Celebrating Hispanic Heritage Month</h4>
                         </div>
                     </div>
-                </section>
-            </main>
-            <footer>footer</footer>
-        </div>
-    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>footer</footer>
+
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/flickity.js"></script>
+
 </body>
 
 </html>
