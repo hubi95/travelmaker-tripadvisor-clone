@@ -56,6 +56,30 @@ button.vip-like i {
     display: none;
 }
 
+.carousel-pic-default {
+    position: relative;
+    height: 271px;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-pic-default:hover::after, .carousel-pic-rentals:hover::after, .carousel-pic-destinations:hover {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    content: " ";
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.bla-pic-1 {
+    background-image: url('../img/');
+}
+
 /* main section -------------------------*/
 
 main {
@@ -66,8 +90,17 @@ main {
 
 /* header main navigation -------------- */
 
-.header-wrapper {
+header {
     position: fixed;
+    z-index: 10;
+    top: 0%;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+}
+
+.header-wrapper {
+    position: absolute;
     z-index: 10;
     top: 0%;
     left: 50%;
@@ -256,26 +289,6 @@ button.sign-in:hover {
     width: 272px;
     height: 350px;
     margin-right: 15px;
-}
-
-.carousel-pic-default {
-    position: relative;
-    height: 273px;
-    background-attachment: scroll;
-    background-position: center;
-    background-size: cover;
-}
-
-.carousel-pic-default:hover::after, .carousel-pic-rentals:hover::after {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    right: 0;
-    left: 0;
-    display: block;
-    height: 100%;
-    content: " ";
-    background: rgba(255, 255, 255, 0.1);
 }
 
 .vip-logo {
@@ -524,6 +537,46 @@ button.sign-in:hover {
 
 .hire-pic {
     grid-column: 8/13;
+}
+
+/* destinations section ---------------- */
+
+.destinations {
+    height: 320px;
+}
+
+.destinations-header {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.destinations-carousel {}
+
+.carousel-cell-destinations {
+    width: 271px;
+    margin-right: 15px;
+}
+
+.destinations-pic {
+    position: relative;
+}
+
+.destinations-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 100%; */
+    padding: 0px 10px 15px 10px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.52) 27%, rgba(0, 0, 0, 0.87) 100%);
+}
+
+.destinations-text p {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 32px;
+    color: #fff;
 }
 
 /* footer ------------------------------- */

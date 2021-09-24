@@ -6,8 +6,8 @@ var flkty = new Flickity(elem, {
     groupCells: true
 });
 
-var rent_elem = document.querySelector('.rentals-carousel');
-var flkty = new Flickity(rent_elem, {
+var rentals_elem = document.querySelector('.rentals-carousel');
+var flkty = new Flickity(rentals_elem, {
     // options
     cellAlign: 'left',
     contain: true,
@@ -21,6 +21,14 @@ var flkty = new Flickity(explore_elem, {
     contain: true
 });
 
+var destinations_elem = document.querySelector('.destinations-carousel');
+var flkty = new Flickity(destinations_elem, {
+    // options
+    cellAlign: 'left',
+    contain: true,
+    groupCells: true
+});
+
 // element argument can be a selector string
 //   for an individual element
 var flkty = new Flickity('.main-carousel', {
@@ -32,5 +40,9 @@ var flkty = new Flickity('.rentals-carousel', {
 });
 
 var flkty = new Flickity('.explore-carousel', {
+    // options
+});
+
+var flkty = new Flickity('.destinations-carousel', {
     // options
 });
