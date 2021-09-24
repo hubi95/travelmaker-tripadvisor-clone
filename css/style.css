@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 }
 
 body {
@@ -426,9 +426,10 @@ button.sign-in:hover {
 .explore-wrapper h2 {
     font-size: 24px;
     font-weight: 500;
+    line-height: 24px;
     width: 100%;
-    margin-top: 36px;
     margin-bottom: 28px;
+    padding-top: 32px;
 }
 
 .carousel-pic-explore {
@@ -439,9 +440,6 @@ button.sign-in:hover {
 }
 
 .carousel-cell-explore {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     width: 366px;
     height: 363px;
     margin-right: 16px;
@@ -449,23 +447,87 @@ button.sign-in:hover {
 }
 
 .carousel-cell-explore h4 {
-    font-size: 17px;
+    font-size: 16px;
     /* font-size: 50px; */
-    font-weight: 500;
-    margin-top: 5px;
+    font-weight: 600;
+    line-height: 20px;
+    height: max-content;
+    margin-top: 20px;
     text-align: center;
 }
 
 .carousel-cell-explore span {
     display: block;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 16px;
     width: 100%;
+    margin-top: 26px;
     text-align: center;
+}
+
+/* expert hire section ------------------- */
+
+.hire-banner {
+    height: 260px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.hire-banner-wrapper {
+    width: 720px;
+    height: 220px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hire-text-wrapper {
+    font-family: 'EB Garamond', serif;
+    background-color: #FAF1ED;
+    grid-column: 1/8;
+}
+
+.hire-text {
+    margin-top: 20px;
+    grid-column: 2/12;
+    grid-row: 2/4;
+}
+
+.hire-text h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.hire-button {
+    align-items: end;
+    margin-bottom: 15px;
+    grid-row: 4/6;
+    grid-column: 2/12;
+    justify-items: start;
+}
+
+.hire-button button {
+    font-size: 14px;
+    font-weight: 600;
+    width: 115px;
+    height: 38px;
+    transition: 0.3s;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #0e2c23;
+}
+
+.hire-button button:hover {
+    background-color: #354E46;
+}
+
+.hire-pic {
+    grid-column: 8/13;
 }
 
 /* footer ------------------------------- */
 
 footer {
-    /* position: absolute; */
+    width: 100%;
 }
