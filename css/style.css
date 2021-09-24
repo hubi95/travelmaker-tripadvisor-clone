@@ -579,6 +579,14 @@ button.sign-in:hover {
     color: #fff;
 }
 
+/* travelmaker get more section -------------- */
+
+.travelmaker-get-more {
+    height: 500px;
+    margin-top: 160px;
+    margin-bottom: 80px;
+}
+
 /* footer ------------------------------- */
 
 footer {
