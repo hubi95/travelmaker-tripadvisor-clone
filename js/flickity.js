@@ -6,7 +6,7 @@ var flkty = new Flickity(elem, {
     groupCells: true
 });
 
-var rent_elem = document.querySelector('.rental-carousel');
+var rent_elem = document.querySelector('.rentals-carousel');
 var flkty = new Flickity(rent_elem, {
     // options
     cellAlign: 'left',
