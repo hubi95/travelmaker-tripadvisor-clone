@@ -28,19 +28,17 @@ button {
     border-style: none;
 }
 
-button.vip-like {
+button.like-heart {
     position: relative;
     top: 10px;
     left: calc(100% - 50px);
     font-size: 20px;
+    line-height: 40px;
     width: 40px;
     height: 40px;
+    text-align: center;
     border-radius: 20px;
     background-color: #fff;
-}
-
-button.vip-like i {
-    transform: translate(1px, 1px);
 }
 
 .flickity-button {
@@ -116,7 +114,7 @@ header {
 }
 
 .header-wrapper img {
-    max-height: 39px;
+    max-height: 30px;
 }
 
 .header-buttons {
@@ -147,6 +145,7 @@ header {
 }
 
 button.sign-in {
+    font-size: ;
     width: 80px;
     text-align: center;
     color: #fff;
@@ -348,38 +347,6 @@ button.sign-in:hover {
     font-weight: 600;
 }
 
-.pic-1 {
-    background-image: url('../img/vip-carousel/atman-studios-UPolqOrkbno-unsplash.jpg');
-}
-
-.pic-2 {
-    background-image: url('../img/vip-carousel/jason-briscoe--eLfQTmDfLk-unsplash.jpg');
-}
-
-.pic-3 {
-    background-image: url('../img/vip-carousel/saad-khan-425b2PhNuHA-unsplash.jpg');
-}
-
-.pic-4 {
-    background-image: url('../img/vip-carousel/paolo-nicolello-2gOxKj594nM-unsplash.jpg');
-}
-
-.pic-5 {
-    background-image: url('../img/vip-carousel/yuliya-pankevich-oyxsG2Lh_uA-unsplash.jpg');
-}
-
-.pic-6 {
-    background-image: url('../img/vip-carousel/finn-cNsIhcGjkc0-unsplash.jpg');
-}
-
-.pic-7 {
-    background-image: url('../img/vip-carousel/sara-dubler-Koei_7yYtIo-unsplash.jpg');
-}
-
-.pic-8 {
-    background-image: url('../img/vip-carousel/paul-szewczyk-yHmnjcVHoP4-unsplash.jpg');
-}
-
 /* reantls section------------------------*/
 
 .home-rentals {
@@ -535,7 +502,10 @@ button.sign-in:hover {
     background-color: #354E46;
 }
 
-.hire-pic {
+.hire-pic-wrapper {
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
     grid-column: 8/13;
 }
 
@@ -635,4 +605,18 @@ button.sign-in:hover {
 
 footer {
     width: 100%;
+    min-height: 420px;
+    background-color: #FAF1ED;
+}
+
+.additional-resources {
+    display: none;
+}
+
+.footer-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+    "links1 links2 links3 . partners partners"
+    "legal legal legal legal pickers pickers"
+    "legal legal legal legal social social";
 }
