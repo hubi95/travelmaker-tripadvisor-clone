@@ -164,25 +164,28 @@ button.sign-in:hover {
 
 .nav-wrapper {
     align-items: center;
-    min-height: 124px;
     margin-top: 60px;
     grid-column: 1/13;
-    grid-gap: 10px;
+    grid-gap: 5px 10px;
+    grid-auto-rows: minmax(68px, auto);
 }
 
 .nav-tile {
-    display: grid;
-    font-size: 14px;
-    font-weight: 600;
-    height: 70px;
-    padding: 18px;
+    display: flex;
+    align-self: stretch;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 11px 16px;
     transition: 0.2s;
     border: 1px solid #000;
     border-radius: 12px;
     background-color: #fff;
     /* background-color: #fff; */
     grid-column: span 2;
-    grid-template-columns: repeat(6, 1fr);
 }
 
 .nav-tile:hover {
@@ -191,21 +194,31 @@ button.sign-in:hover {
 }
 
 .nav-tile span {
-    align-self: start;
     text-align: left;
     justify-self: start;
-    grid-column: 1/5;
 }
 
 .nav-tile i {
-    align-self: start;
     font-size: 19px;
     justify-self: end;
-    grid-column: 6/7;
 }
 
 .extra-button {
     display: none;
+}
+
+@media (max-width: 1165px) {
+    .nav-wrapper {
+        grid-auto-rows: minmax(48px, auto);
+    }
+    .nav-tile {
+        display: flex;
+        align-self: stretch;
+        grid-column: span 3;
+    }
+    .nav-tile span {
+        /* min-height: 24px; */
+    }
 }
 
 /* search-banner --------------------- */
@@ -614,9 +627,169 @@ footer {
 }
 
 .footer-grid {
+    display: grid;
+    max-width: 100%;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    grid-gap: 18px;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-    "links1 links2 links3 . partners partners"
-    "legal legal legal legal pickers pickers"
-    "legal legal legal legal social social";
+    grid-auto-rows: minmax(10px, auto);
+    grid-template-areas: "links1 links2 links3 . partners partners" "legal legal legal legal pickers pickers" "legal legal legal legal social social";
+}
+
+.footer-section-header {
+    font-weight: 300;
+}
+
+.footer-links li {
+    list-style: none;
+}
+
+.footer-links li a {
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+.footer-links li p {
+    /* display: inline; */
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 16px;
+}
+
+.pickers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.currency, .country {
+    width: 49%;
+    height: 36px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.currency:hover, .country:hover {
+    background-color: #F2F2F2;
+}
+
+.links1 {
+    grid-area: links1;
+}
+
+.links2 {
+    grid-area: links2;
+}
+
+.links3 {
+    grid-area: links3;
+}
+
+.partners {
+    grid-area: partners;
+}
+
+.legal {
+    grid-area: legal;
+}
+
+.terms-links {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #000;
+    gap: 0px 10px;
+}
+
+.terms-links span a {
+    color: #000;
+}
+
+.terms-links span a:hover {
+    color: #545454;
+}
+
+.terms-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.terms-text-wrapper {}
+
+.rights-reserved {
+    font-size: 12px;
+}
+
+.region-notice {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.pickers {
+    grid-area: pickers;
+}
+
+.social {
+    display: grid;
+    justify-content: end;
+    grid-area: social;
+    grid-auto-flow: column;
+}
+
+.social .fab {
+    align-self: center;
+    font-size: 24px;
+    padding: 12px;
+}
+
+@media (max-width: 1165px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr 3fr;
+        grid-template-areas: "links1 links2 links3 partners" "legal legal legal pickers" "legal legal legal social";
+    }
+}
+
+@media (max-width: 1008px) {
+    .footer-grid {
+        display: block;
+    }
+    .panel {
+        display: none;
+        margin-bottom: 30px;
+        padding-left: 28px;
+    }
+    .accordion {
+        display: flex;
+        margin-bottom: 28px;
+    }
+    .accordion.active {
+        margin-bottom: 0px;
+    }
+    .accordion::before {
+        font-size: 20px;
+        font-weight: 500;
+        width: 28px;
+        content: '\002B';
+        color: #777;
+    }
+    .active::before {
+        content: "\2212";
+    }
 }
