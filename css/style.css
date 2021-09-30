@@ -180,8 +180,6 @@ button.sign-in:hover {
 }
 
 @media (max-width: 750px) {
-
-    
     .header-buttons>button {
         display: none;
     }
@@ -199,7 +197,7 @@ button.sign-in:hover {
     .aside-nav-wrapper {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -400px;
         display: block;
         overflow-y: auto;
         width: 400px;
