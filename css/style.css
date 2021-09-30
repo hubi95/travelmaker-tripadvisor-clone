@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
 }
 
 body {
@@ -158,6 +158,18 @@ button.sign-in:hover {
     display: none;
 }
 
+.header-search {
+    display: none;
+}
+
+.aside-nav-wrapper {
+    display: none;
+}
+
+.burger {
+    display: none;
+}
+
 @media (max-width: 1008px) {
     .header-buttons button span {
         display: none;
@@ -168,6 +180,8 @@ button.sign-in:hover {
 }
 
 @media (max-width: 750px) {
+
+    
     .header-buttons>button {
         display: none;
     }
@@ -181,6 +195,42 @@ button.sign-in:hover {
         padding: 10px;
         border-radius: 20px;
         background-color: transparent;
+    }
+    .aside-nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        overflow-y: auto;
+        width: 400px;
+        height: 100vh;
+        transition: 0.3s;
+        background-color: #fff;
+    }
+    .aside-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 48px;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .aside-sigin-button {
+        line-height: 40px;
+        width: 300px;
+        height: 40px;
+        margin: 48px auto 24px auto;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        border-radius: 20px;
+        background-color: #000;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
     }
 }
 
