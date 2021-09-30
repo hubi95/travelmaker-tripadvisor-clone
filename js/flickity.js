@@ -18,7 +18,8 @@ var explore_elem = document.querySelector('.explore-carousel');
 var flkty = new Flickity(explore_elem, {
     // options
     cellAlign: 'left',
-    contain: true
+    contain: true,
+    groupCells: true
 });
 
 var destinations_elem = document.querySelector('.destinations-carousel');
