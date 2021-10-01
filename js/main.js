@@ -12,3 +12,22 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+// show navigation search input
+
+const searchAppear = document.querySelector('.header-search-wrapper');
+
+const changeHeight = function () {
+
+    let searchHeight = document.querySelector('.search-bubble').getBoundingClientRect().top;
+
+    if ((searchHeight < 0) && (window.innerWidth > 750)) {
+        searchAppear.classList.add('active');
+    }
+    else {
+        searchAppear.classList.remove('active');
+    }
+};
+
+window.addEventListener('scroll', changeHeight)
+window.addEventListener('resize', changeHeight);
