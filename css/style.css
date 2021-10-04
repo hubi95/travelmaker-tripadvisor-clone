@@ -11,6 +11,11 @@ body {
     background-color: white;
 }
 
+body.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
 .wrapper {
     /* width: 100%; */
     max-width: 1184px;
@@ -47,8 +52,12 @@ button.like-heart {
     background: white;
 }
 
+.flickity-button:disabled {
+    display: none;
+}
+
 .flickity-prev-next-button {
-    transform: translate(0, -50px);
+    transform: translate(0, -50%);
 }
 
 .flickity-page-dots {
@@ -79,6 +88,96 @@ button.like-heart {
     background-image: url('../img/');
 }
 
+@media (max-width: 768px) {
+    .main-carousel .flickity-button, .rentals-carousel .flickity-button, .explore-carousel .flickity-button, .destinations-carousel .flickity-button {
+        display: none;
+    }
+}
+
+/* aside nav */
+
+@media (max-width: 768px) {
+    .aside-nav-wrapper {
+        position: fixed;
+        z-index: 12;
+        top: 0px;
+        left: -400px;
+        display: block;
+        overflow-y: auto;
+        width: 400px;
+        max-width: 100vw;
+        height: 100vh;
+        transition: 0.4s;
+        background-color: #fff;
+    }
+    .aside-nav-wrapper.active {
+        left: 0;
+    }
+    .aside-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 48px;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .aside-sigin-button {
+        line-height: 40px;
+        width: 300px;
+        height: 40px;
+        margin: 48px auto 24px auto;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        border-radius: 20px;
+        background-color: #000;
+    }
+    .navigation-wrapper-link-large, .navigation-wrapper-link-small {
+        padding: 20px;
+    }
+    .navigation-wrapper-link-large {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    .navigation-wrapper-link-small {
+        font-size: 1em;
+        font-weight: 500;
+    }
+    .navigation-wrapper-link-large div {
+        padding-bottom: 20px;
+    }
+    .navigation-wrapper-link-small div {
+        padding-bottom: 20px;
+    }
+    .aside-nav-content hr {
+        margin: 10px 20px;
+        color: #;
+    }
+    .overlay {
+        position: fixed;
+        z-index: 11;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        visibility: hidden;
+        height: 100%;
+        content: " ";
+        transition: 0.4s;
+        transition: visibility 0s linear 0.1s, opacity 0.1s;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    .overlay.active {
+        left: min(400px, 10%);
+        visibility: visible;
+        transition: visibility 0.6s linear 0.1s, opacity 1s;
+        opacity: 1;
+    }
+}
+
 /* main section -------------------------*/
 
 main {
@@ -93,6 +192,7 @@ header {
     position: fixed;
     z-index: 10;
     top: 0%;
+    left: 0%;
     width: 100%;
     height: 60px;
     background-color: #fff;
@@ -210,7 +310,7 @@ button.sign-in:hover {
     display: none;
 }
 
-@media (max-width: 1008px) {
+@media (max-width: 1024px) {
     .header-buttons button span {
         display: none;
     }
@@ -219,7 +319,10 @@ button.sign-in:hover {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
+    .header-wrapper img {
+        max-height: 22px;
+    }
     .header-buttons>button {
         display: none;
     }
@@ -236,14 +339,18 @@ button.sign-in:hover {
     }
     .aside-nav-wrapper {
         position: fixed;
-        top: 0;
+        z-index: 12;
+        top: 0px;
         left: -400px;
         display: block;
         overflow-y: auto;
         width: 400px;
         height: 100vh;
-        transition: 0.3s;
+        transition: 0.4s;
         background-color: #fff;
+    }
+    .aside-nav-wrapper.active {
+        left: 0;
     }
     .aside-close {
         position: absolute;
@@ -268,6 +375,7 @@ button.sign-in:hover {
     }
     .burger {
         display: block;
+        font-size: 22px;
         cursor: pointer;
     }
     .header-search-wrapper {
@@ -300,7 +408,6 @@ button.sign-in:hover {
     border: 1px solid #000;
     border-radius: 12px;
     background-color: #fff;
-    /* background-color: #fff; */
     grid-column: span 2;
 }
 
@@ -323,6 +430,16 @@ button.sign-in:hover {
     display: none;
 }
 
+.navigation-carousel::after {
+    display: none;
+    content: '';
+}
+
+.navigation-carousel .flickity-button {
+    border: none;
+    background: transparent;
+}
+
 @media (max-width: 1165px) {
     .nav-wrapper {
         grid-auto-rows: minmax(48px, auto);
@@ -331,6 +448,24 @@ button.sign-in:hover {
         display: flex;
         align-self: stretch;
         grid-column: span 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation-carousel:after {
+        content: 'flickity';
+    }
+    .nav-tile {
+        align-items: center;
+        width: 200px;
+        height: 40px;
+        margin-right: 8px;
+    }
+    .nav-tile span {
+        width: max-content;
+    }
+    .nav-wrapper {
+        margin-top: 75px;
     }
 }
 
@@ -388,9 +523,12 @@ button.sign-in:hover {
     border-style: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .no-padding {
         padding: 0px;
+    }
+    .search-bubble {
+        max-width: 92%;
     }
 }
 
@@ -480,6 +618,18 @@ button.sign-in:hover {
     font-weight: 600;
 }
 
+@media (max-width: 768px) {
+    .carousel-cell {
+        width: clamp(33vw, 271px, 60vw);
+        height: max-content;
+        margin-right: 8px;
+    }
+    .carousel-pic-default {
+        width: clamp(33vw, 271px, 60vw);
+        height: clamp(33vw, 271px, 60vw);
+    }
+}
+
 /* reantls section------------------------*/
 
 .home-rentals {
@@ -526,6 +676,19 @@ button.sign-in:hover {
 .rentals-amount {
     font-size: 15px;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .rentals-wrapper p {
+        margin-bottom: 52px;
+        grid-column: 1/13;
+    }
+    .rentals-carousel {
+        grid-column: 1/13;
+    }
+    .home-rentals {
+        margin-top: 5vw;
+    }
 }
 
 /* explore section ----------------------- */
@@ -625,6 +788,7 @@ button.sign-in:hover {
     font-weight: 600;
     width: 115px;
     height: 38px;
+    margin-top: 10px;
     transition: 0.3s;
     color: #fff;
     border-radius: 10px;
@@ -640,6 +804,26 @@ button.sign-in:hover {
     background-position: center;
     background-size: cover;
     grid-column: 8/13;
+}
+
+@media (max-width: 450px) {
+    .hire-pic-wrapper {
+        grid-row: 1fr;
+        grid-column: 1/13;
+    }
+    .hire-text-wrapper {
+        grid-column: 1/13;
+        grid-row: 1fr;
+    }
+    .hire-banner-wrapper {
+        height: 400px;
+        grid-template-rows: 1fr 1fr;
+    }
+    .hire-banner {
+        height: max-content;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
 }
 
 /* destinations section ---------------- */
@@ -682,6 +866,14 @@ button.sign-in:hover {
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .carousel-cell-destinations {
+        width: clamp(33vw, 271px, 60vw);
+        height: clamp(33vw, 271px, 60vw);
+        margin-right: 8px;
+    }
+}
+
 /* travelmaker get more section -------------- */
 
 .travelmaker-get-more {
@@ -712,7 +904,7 @@ button.sign-in:hover {
 }
 
 .get-more-text-wrapper h2 {
-    font-size: 44px;
+    font-size: 43px;
 }
 
 .get-more-text-wrapper div {
@@ -731,6 +923,16 @@ button.sign-in:hover {
 
 .get-more-text-wrapper button:hover {
     background-color: #F2F2F2;
+}
+
+@media (max-width: 768px) {
+    .travelmaker-get-more {
+        margin-top: 10vw;
+        margin-bottom: 15vw;
+    }
+    .get-more-text-wrapper div {
+        font-size: 18px;
+    }
 }
 
 /* footer ------------------------------- */
@@ -794,8 +996,10 @@ footer {
 }
 
 .currency, .country {
+    line-height: 36px;
     width: 49%;
     height: 36px;
+    padding: 0 10px;
     cursor: pointer;
     transition: 0.3s;
     border: 2px solid #E0E0E0;
@@ -885,7 +1089,7 @@ footer {
     }
 }
 
-@media (max-width: 1008px) {
+@media (max-width: 1024px) {
     .footer-grid {
         display: block;
     }

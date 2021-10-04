@@ -3,7 +3,8 @@ var flkty = new Flickity(elem, {
     // options
     cellAlign: 'left',
     contain: true,
-    groupCells: true
+    groupCells: true,
+    freeScroll: true
 });
 
 var rentals_elem = document.querySelector('.rentals-carousel');
@@ -11,7 +12,8 @@ var flkty = new Flickity(rentals_elem, {
     // options
     cellAlign: 'left',
     contain: true,
-    groupCells: true
+    groupCells: true,
+    freeScroll: true
 });
 
 var explore_elem = document.querySelector('.explore-carousel');
@@ -27,7 +29,18 @@ var flkty = new Flickity(destinations_elem, {
     // options
     cellAlign: 'left',
     contain: true,
-    groupCells: true
+    groupCells: true,
+    freeScroll: true
+});
+
+var mobile_nav = document.querySelector('.navigation-carousel');
+var flkty = new Flickity(mobile_nav, {
+    // options
+    cellAlign: 'left',
+    contain: true,
+    groupCells: true,
+    watchCSS: true,
+    freeScroll: true
 });
 
 // element argument can be a selector string
@@ -45,5 +58,9 @@ var flkty = new Flickity('.explore-carousel', {
 });
 
 var flkty = new Flickity('.destinations-carousel', {
+    // options
+});
+
+var flkty = new Flickity('.navigation-carousel', {
     // options
 });
