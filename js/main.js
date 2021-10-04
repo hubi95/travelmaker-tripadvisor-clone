@@ -14,7 +14,7 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-// show navigation search input when search banner is not visible and not on mobile and switch nav to mobile
+// show navigation search input when search banner is not visible and not on mobile and switch navigation to mobile view
 
 const searchAppear = document.querySelector('.header-search-wrapper');
 
@@ -42,6 +42,8 @@ const mobileView = function () {
 window.addEventListener('scroll', mobileView)
 window.addEventListener('resize', mobileView);
 document.addEventListener("DOMContentLoaded", mobileView);
+
+// toggle mobile side navigation triggered by button "burger icon", close by "x" button
 
 const mobileNavOpen = document.querySelector('.burger');
 const mobileMenu = document.querySelector('.aside-nav-wrapper');
