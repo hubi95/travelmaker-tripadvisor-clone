@@ -1,8 +1,6 @@
 Travelmaker - Tripadvisor clone
 ============
 
-//// Please note, this project is still in progress!
-
 This is a Travel agency site.
 
 The project mainly focuses on recreating
